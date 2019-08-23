@@ -180,6 +180,7 @@ button:hover, button:focus,
 
 #about-list {
   list-style: var(--list-none); /* removes the dot lists from list on about.html*/
+  font-weight: bold;
 }
 
 /* Grid fallback*/
