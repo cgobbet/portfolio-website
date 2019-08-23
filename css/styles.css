@@ -111,6 +111,7 @@ h3 {
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
+  font-weight: bold;
 }
 
 /* .navigation-list  on all headers */
@@ -178,10 +179,9 @@ button:hover, button:focus,
   text-align: var(--text-center);
   }
 
-#about-list {
-  list-style: var(--list-none); /* removes the dot lists from list on about.html*/
-  font-weight: bold;
-}
+  #about-list {
+    list-style: var(--list-none); /* removes the dot lists from list on about.html*/
+  }
 
 /* Grid fallback*/
 
