@@ -164,7 +164,8 @@ button:hover, button:focus,
 .profile {
   max-width: 700px;
   margin: 0 auto;
-  text-align-last: left;
+  /*   text-align-last: left;  */
+
 }
 
 .profile__portrait {
@@ -271,11 +272,55 @@ button:hover, button:focus,
 }
 
 @media all and (max-width: 500px) {
+  .navigation-list {
+    float: none;
+  }
+
+  .navigation-support {
+    margin: 0;
+  }
+
+  .page-header {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .page-header__item {
+    float: none;
+  }
+
+  .profile__portrait {
+    float: none;
+  }
+
   .grid {
     grid-template-columns: 1fr; /* changes layout from a 3-column grid to a 1-column grid  */
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
+  .navigation-list {
+    float: none;
+  }
+
+  .navigation-support {
+    margin: 0;
+  }
+
+  .page-header {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .page-header__item {
+    float: none;
+  }
+
+  .profile__portrait {
+    float: none;
+  }
+
   .grid {
     grid-template-columns: 1fr 1fr; /* changes layout from a 3-column grid to a 2-column grid on specified sizes */
   }
