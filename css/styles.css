@@ -5,12 +5,13 @@ Text Color (Black): #000000;
 Primary Color (Dark Red): #781820;
 Secondary Color (Gray): #ABABAB;
 Tertiary Color (Yellow): #cead00;
-Dark Grey: #2b2b2b;
+
 */
 :root {
   --primary-color: #781820;
   --secondary-color: #ABABAB;
   --tertiary-color: #cead00;
+  --quaternary-color: #FFA433;
   --dispflex: flex;
   --d-inline-block: inline-block;
   --float-r: right;
