@@ -107,11 +107,11 @@ h3 {
 .page-header__item {
   flex: 0 1 200px;
   float: var(--float-r);
+  padding: 5px;
 }
 /* .page-header__item:last-child on all headers */
 .page-header__item:last-child {
   flex-grow: 1;
-  text-align: right;
 }
 
 /* .navigation-list  on all headers */
@@ -201,6 +201,7 @@ button:hover, button:focus,
 .grid__item {
   background-color: LightGrey;
   padding: var(--pad10);
+  text-align: center;
   /* Set width to auto*/
   width: auto;
 }
