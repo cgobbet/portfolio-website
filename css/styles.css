@@ -100,7 +100,7 @@ h3 {
   display: var(--dispflex);
   width: 100%;
   padding: 20px;
-
+  font-weight: bold;
 }
 /*  .page-header__item on all headers */
 .page-header__item {
@@ -111,7 +111,6 @@ h3 {
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
-  font-weight: bold;
 }
 
 /* .navigation-list  on all headers */
