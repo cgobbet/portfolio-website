@@ -5,12 +5,14 @@ Text Color (Black): #000000;
 Primary Color (Dark Red): #781820;
 Secondary Color (Gray): #ABABAB;
 Tertiary Color (Yellow): #cead00;
+Backup Color: #FAFAFA;
 
 */
 :root {
   --primary-color: #781820;
   --secondary-color: #ABABAB;
   --tertiary-color: #cead00;
+  --backup-color: #FAFAFA;
   --quaternary-color: #FFA433;
   --dispflex: flex;
   --d-inline-block: inline-block;
@@ -200,7 +202,8 @@ button:hover, button:focus,
 }
 
 .grid__item {
-  background-color: #ABABAB;
+  background-color: var(--backup-color);
+  color: black;
   padding: var(--pad10);
   text-align: center;
   /* Set width to auto*/
