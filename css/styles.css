@@ -200,7 +200,7 @@ button:hover, button:focus,
 }
 
 .grid__item {
-  background-color: LightGrey;
+  background-color: #ABABAB;
   padding: var(--pad10);
   text-align: center;
   /* Set width to auto*/
