@@ -6,3 +6,5 @@ js/.DS_Store
 js/stylelint.config.js
 stylelint.config.js
 js/stylelint.config.js
+.stylelintrc
+.browserslist
