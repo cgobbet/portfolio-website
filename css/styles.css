@@ -1,19 +1,16 @@
-/*
-Colors used
-
+/* Colors used
 Text Color (Black): #000000;
 Primary Color (Dark Red): #781820;
-Secondary Color (Gray): #ABABAB;
+Secondary Color (Gray): #ababab;
 Tertiary Color (Yellow): #cead00;
-Backup Color: #FAFAFA;
+Backup Color: #fafafa; */
 
-*/
 :root {
   --primary-color: #781820;
-  --secondary-color: #ABABAB;
+  --secondary-color: #ababab;
   --tertiary-color: #cead00;
-  --backup-color: #FAFAFA;
-  --quaternary-color: #FFA433;
+  --backup-color: #fafafa;
+  --quaternary-color: #ffa433;
   --dispflex: flex;
   --d-inline-block: inline-block;
   --float-r: right;
@@ -36,7 +33,8 @@ a {
   color: var(--primary-color);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: var(--text-none);
 }
@@ -55,7 +53,9 @@ a:active {
   color: var(--primary-color);
   transition: all 0.5s linear;
 }
-.link:hover, a:focus {
+
+.link:hover,
+a:focus {
   color: var(--tertiary-color);
 }
 
@@ -63,11 +63,14 @@ body {
   font-family: var(--font-Francois);
   font-weight: 400;
   font-size: var(--font18);
+
   /* Sets the font size to 18px */
   line-height: 1.3;
+
   /* Sets the line-height to 1.5 */
   padding: 3em;
-  /* sets the padding area on all four sides of an element*/
+
+  /* sets the padding area on all four sides of an element */
 }
 
 p {
@@ -105,12 +108,14 @@ h3 {
   padding: 20px;
   font-weight: bold;
 }
+
 /*  .page-header__item on all headers */
 .page-header__item {
   flex: 0 1 200px;
   float: var(--float-r);
   padding: 5px;
 }
+
 /* .page-header__item:last-child on all headers */
 .page-header__item:last-child {
   flex-grow: 1;
@@ -124,7 +129,7 @@ h3 {
 }
 
 .navigation-list li {
-  display:var(--d-inline-block);
+  display: var(--d-inline-block);
   margin-left: 15px;
 }
 
@@ -136,12 +141,15 @@ h3 {
   margin-right: 4%;
 }
 
-.button, button {
+.button,
+button {
   /* overwrites browser defaults and resets the border */
   border: none;
-  display:var(--d-inline-block);
+  display: var(--d-inline-block);
+
   /* takes the font from the outer container */
   font-family: inherit;
+
   /* styles the button */
   background-color: var(--primary-color);
   color: white;
@@ -149,25 +157,30 @@ h3 {
   padding: var(--pad10);
   margin: 5px;
   border-radius: 3px;
+
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition-duration: 0.2s;
   transition-property: opacity;
 }
 
-button:hover, button:focus,
-.button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
+
   /* reduces the opacity of the button to 80% */
   opacity: 0.6;
 }
+
 /*  settings for image office_square_150png on index.html */
 .profile {
   max-width: 700px;
   margin: 0 auto;
-  /*   text-align-last: left;  */
 
+  /*   text-align-last: left;  */
 }
 
 .profile__portrait {
@@ -180,20 +193,20 @@ button:hover, button:focus,
 /* Aligns Download button and H1 headins in about.html */
 .content {
   text-align: var(--text-center);
-  }
+}
 
-  #about-list {
-    list-style: var(--list-none); /* removes the dot lists from list on about.html*/
-  }
+#about-list {
+  list-style: var(--list-none); /* removes the dot lists from list on about.html */
+}
 
-/* Grid fallback*/
+/* Grid fallback */
 
 .grid__item {
-  display:var(--d-inline-block);
+  display: var(--d-inline-block);
   width: 33%;
 }
 
-/* Styling CSS grid*/
+/* Styling CSS grid */
 
 .grid {
   display: grid;
@@ -206,15 +219,21 @@ button:hover, button:focus,
   color: black;
   padding: var(--pad10);
   text-align: center;
-  /* Set width to auto*/
+
+  /* Set width to auto */
   width: auto;
 }
 
-.grid__item:last-child {
+/* .grid__item:last-child {
   grid-column-start: 3;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
+} */
+
+.grid__item: last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
 }
 
 .page-footer {
@@ -233,9 +252,11 @@ button:hover, button:focus,
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -249,6 +270,7 @@ button:hover, button:focus,
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -262,6 +284,7 @@ button:hover, button:focus,
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
@@ -271,7 +294,7 @@ button:hover, button:focus,
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-@media all and (max-width: 750px){ /* shared code: screens with these sizes are all included to details below */
+@media all and (max-width: 750px) { /* shared code: screens with these sizes are all included to details below */
 }
 
 @media all and (max-width: 500px) {
@@ -301,7 +324,8 @@ button:hover, button:focus,
     grid-template-columns: 1fr; /* changes layout from a 3-column grid to a 1-column grid  */
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .navigation-list {
     float: none;
   }
@@ -328,14 +352,17 @@ button:hover, button:focus,
     grid-template-columns: 1fr 1fr; /* changes layout from a 3-column grid to a 2-column grid on specified sizes */
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px; /* spacing between the grid items reduced to 10px */
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px; /* H1 max size under smaller screens  */
   }
