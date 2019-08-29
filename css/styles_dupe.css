@@ -1,0 +1,381 @@
+/* Colors used
+Text Color (Black): #000000;
+Primary Color (Dark Red): #781820;
+Secondary Color (Gray): #ababab;
+Tertiary Color (Yellow): #cead00;
+Backup Color: #fafafa; */
+
+:root {
+  --primary-color: #781820;
+  --secondary-color: #ababab;
+  --tertiary-color: #cead00;
+  --backup-color: #fafafa;
+  --quaternary-color: #ffa433;
+  --dispflex: flex;
+  --d-inline-block: inline-block;
+  --float-r: right;
+  --font700: 700;
+  --font18: 18px;
+  --font-Francois: 'Francois+One', sans-serif;
+  --font-Lato: 'Lato', sans-serif;
+  --line-h-18: 1.8;
+  --list-none: none;
+  --pad10: 10px;
+  --text-center: center;
+  --text-none: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: var(--text-none);
+}
+
+a:visited {
+  /* visited link */
+  color: var(--secondary-color);
+}
+
+a:active {
+  /* selected link */
+  color: var(--tertiary-color);
+}
+
+.link {
+  color: var(--primary-color);
+  transition: all 0.5s linear;
+}
+
+.link:hover,
+a:focus {
+  color: var(--tertiary-color);
+}
+
+body {
+  font-family: var(--font-Francois);
+  font-weight: 400;
+  font-size: var(--font18);
+
+  /* Sets the font size to 18px */
+  line-height: 1.3;
+
+  /* Sets the line-height to 1.5 */
+  padding: 3em;
+
+  /* sets the padding area on all four sides of an element */
+}
+
+p {
+  text-align: var(--text-center);
+}
+
+h1 {
+  font-family: var(--font-Lato);
+  font-size: 30px;
+  font-weight: var(--font700);
+  line-height: var(--line-h-18);
+  padding: var(--pad10);
+}
+
+h2 {
+  font-family: var(--font-Lato);
+  font-size: 24px;
+  font-weight: var(--font700);
+  line-height: var(--line-h-18);
+  padding: var(--pad10);
+}
+
+h3 {
+  font-family: var(--font-Lato);
+  font-size: var(--font18);
+  font-weight: var(--font700);
+  line-height: var(--line-h-18);
+  padding: var(--pad10);
+}
+
+/*  .page-header on all headers */
+.page-header {
+  display: var(--dispflex);
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/*  .page-header__item on all headers */
+.page-header__item {
+  flex: 0 1 200px;
+  float: var(--float-r);
+  padding: 5px;
+}
+
+/* .page-header__item:last-child on all headers */
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+/* .navigation-list  on all headers */
+.navigation-list {
+  list-style: var(--list-none); /* removes the dot lists */
+  display: var(--dispflex);
+  float: var(--float-r);
+}
+
+.navigation-list li {
+  display: var(--d-inline-block);
+  margin-left: 15px;
+}
+
+.navigation-list__item--active {
+  text-decoration: var(--text-none);
+}
+
+.navigation-support {
+  margin-right: 4%;
+}
+
+.button,
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: var(--d-inline-block);
+
+  /* takes the font from the outer container */
+  font-family: inherit;
+
+  /* styles the button */
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: var(--text-none);
+  padding: var(--pad10);
+  margin: 5px;
+  border-radius: 3px;
+
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.6;
+}
+
+/*  settings for image office_square_150png on index.html */
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+
+  /*   text-align-last: left;  */
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+/* Aligns Download button and H1 headins in about.html */
+.content {
+  text-align: var(--text-center);
+}
+
+#about-list {
+  list-style: var(--list-none); /* removes the dot lists from list on about.html */
+}
+
+/* Grid fallback */
+
+/* .grid__item {
+  display: var(--d-inline-block);
+  width: 33%;
+} */
+
+/* Styling CSS grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: var(--backup-color);
+  color: black;
+  padding: var(--pad10);
+  text-align: center;
+
+  /* Set width to auto */
+  width: auto;
+}
+
+/* .grid__item:last-child {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+} */
+
+.grid__item: last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
+.page-footer {
+  clear: both;
+  display: var(--dispflex);
+  flex-direction: column;
+  text-align: var(--text-center);
+  justify-content: center;
+}
+
+.berlin-illustration {
+  display: block;
+  margin: auto;
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@media all and (max-width: 750px) { /* shared code: screens with these sizes are all included to details below */
+}
+
+@media all and (max-width: 500px) {
+  .page-header {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .page-header__item {
+    float: none;
+  }
+
+  .page-header__item:last-child {
+    flex-grow: 1;
+    align-self: center;
+  }
+
+  .navigation-list {
+    float: none;
+  }
+
+  .navigation-support {
+    margin: 0;
+  }
+
+  .profile__portrait {
+    float: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* changes layout from a 3-column grid to a 1-column grid  */
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .page-header {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .page-header__item {
+    float: none;
+  }
+
+  .page-header__item:last-child {
+    flex-grow: 1;
+    align-self: center;
+  }
+
+  .navigation-list {
+    float: none;
+  }
+
+  .navigation-support {
+    margin: 0;
+  }
+
+  .profile__portrait {
+    float: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr; /* changes layout from a 3-column grid to a 2-column grid on specified sizes */
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px; /* spacing between the grid items reduced to 10px */
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px; /* H1 max size under smaller screens  */
+  }
+}
