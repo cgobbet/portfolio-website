@@ -198,6 +198,119 @@ button:focus,
   list-style: var(--list-none); /* removes the dot lists from list on about.html */
 }
 
+.container {
+  border-radius: 5px;
+  background-color: #f2f3f4;
+  border: black solid 1px;
+  padding: 20px;
+  text-align: var(--text-center);
+}
+
+/* Styling CSS Form */
+
+input[type=text] {
+  font-size: 12px;
+  width: 80%; /* Full width */
+  padding: 8px;
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 12px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 3px; /* Add a top margin */
+  margin-bottom: 3px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=email] {
+  font-size: 12px;
+  width: 80%; /* Full width */
+  padding: 8px;
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 12px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 3px; /* Add a top margin */
+  margin-bottom: 3px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=password] {
+  font-size: 12px;
+  width: 80%; /* Full width */
+  padding: 8px;
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 12px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 3px; /* Add a top margin */
+  margin-bottom: 3px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+button[type=submit] {
+  background-color: #781820;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.input-wrapper {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  /* border: dashed red 1px; */
+  align-items: center;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  min-width: 75px;
+  align-items: center;
+}
+
+#textarea {
+  font-size: 12px;
+  width: 80%; /* Full width */
+  padding: 8px;
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 12px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 3px; /* Add a top margin */
+  margin-bottom: 3px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+#register-form {
+  float: center;
+}
+
+.message {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::placeholder {
+  font-family: 'Lato', sans-serif;
+  color: red;
+  opacity: 0.4;
+  font-size: 14px;
+}
+
+.error-message {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: red;
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+
+#map {
+  border-top: solid black 1px;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+  border-bottom: solid black 1px;
+}
+
 /* Styling CSS grid */
 
 .grid {
