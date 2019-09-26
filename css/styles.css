@@ -6,21 +6,21 @@ Tertiary Color (Yellow): #cead00;
 Backup Color: #fafafa; */
 
 :root {
+  --primary-color: #781820;
+  --secondary-color: #ababab;
+  --tertiary-color: #cead00;
   --backup-color: #fafafa;
-  --d-inline-block: inline-block;
+  --quaternary-color: #ffa433;
   --dispflex: flex;
+  --d-inline-block: inline-block;
   --float-r: right;
+  --font700: 700;
+  --font18: 18px;
   --font-Francois: 'Francois+One', sans-serif;
   --font-Lato: 'Lato', sans-serif;
-  --font18: 18px;
-  --font700: 700;
   --line-h-18: 1.8;
   --list-none: none;
   --pad10: 10px;
-  --primary-color: #781820;
-  --quaternary-color: #ffa433;
-  --secondary-color: #ababab;
-  --tertiary-color: #cead00;
   --text-center: center;
   --text-none: none;
 }
@@ -61,8 +61,8 @@ a:focus {
 
 body {
   font-family: var(--font-Francois);
-  font-size: var(--font18);
   font-weight: 400;
+  font-size: var(--font18);
 
   /* Sets the font size to 18px */
   line-height: 1.3;
@@ -104,9 +104,9 @@ h3 {
 /*  .page-header on all headers */
 .page-header {
   display: var(--dispflex);
-  font-weight: bold;
-  padding: 20px;
   width: 100%;
+  padding: 20px;
+  font-weight: bold;
 }
 
 /*  .page-header__item on all headers */
@@ -124,9 +124,9 @@ h3 {
 
 /* .navigation-list  on all headers */
 .navigation-list {
+  list-style: var(--list-none); /* removes the dot lists */
   display: var(--dispflex);
   float: var(--float-r);
-  list-style: var(--list-none); /* removes the dot lists */
 }
 
 .navigation-list li {
@@ -144,23 +144,23 @@ h3 {
 
 .button,
 button {
-
-  /* styles the button */
-  background-color: var(--primary-color);
   /* overwrites browser defaults and resets the border */
   border: none;
-
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  color: white;
   display: var(--d-inline-block);
 
   /* takes the font from the outer container */
   font-family: inherit;
-  margin: 5px;
-  padding: var(--pad10);
+
+  /* styles the button */
+  background-color: var(--primary-color);
+  color: white;
   text-decoration: var(--text-none);
+  padding: var(--pad10);
+  margin: 5px;
+  border-radius: 3px;
+
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition-duration: 0.2s;
   transition-property: opacity;
 }
@@ -178,15 +178,15 @@ button:focus,
 
 /*  settings for image office_square_150png on index.html */
 .profile {
-  margin: 0 auto;
   max-width: 700px;
+  margin: 0 auto;
 }
 
 .profile__portrait {
-  border-radius: 50%;
   float: left;
-  margin-right: 40px;
   width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
 }
 
 /* Aligns Download button and H1 headins in about.html */
@@ -199,9 +199,9 @@ button:focus,
 }
 
 .container {
+  border-radius: 5px;
   background-color: #f2f3f4;
   border: black solid 1px;
-  border-radius: 5px;
   padding: 20px;
   text-align: var(--text-center);
 }
@@ -209,73 +209,74 @@ button:focus,
 /* Styling CSS Form */
 
 input[type=text] {
+  font-size: 12px;
+  width: 80%; /* Full width */
+  padding: 8px;
   border: 1px solid #ccc; /* Gray border */
   border-radius: 12px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  font-size: 12px;
-  margin-bottom: 3px; /* Bottom margin */
   margin-top: 3px; /* Add a top margin */
-  padding: 8px;
-  resize: vertical; /* Allow the user to vertically resize the
-  width: 80% /* Full width */
+  margin-bottom: 3px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 input[type=email] {
+  font-size: 12px;
+  width: 80%; /* Full width */
+  padding: 8px;
   border: 1px solid #ccc; /* Gray border */
   border-radius: 12px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  font-size: 12px;
-  margin-bottom: 3px; /* Bottom margin */
   margin-top: 3px; /* Add a top margin */
-  padding: 8px;
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-  width: 80% /* Full width */
+  margin-bottom: 3px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 input[type=password] {
+  font-size: 12px;
+  width: 80%; /* Full width */
+  padding: 8px;
   border: 1px solid #ccc; /* Gray border */
   border-radius: 12px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  font-size: 12px;
-  margin-bottom: 3px; /* Bottom margin */
   margin-top: 3px; /* Add a top margin */
-  padding: 8px;
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-  width: 80% /* Full width */
+  margin-bottom: 3px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 button[type=submit] {
   background-color: #781820;
+  color: white;
+  padding: 12px 20px;
   border: none;
   border-radius: 12px;
-  color: white;
   cursor: pointer;
-  padding: 12px 20px;
 }
 
 .input-wrapper {
-  align-items: center;
   margin-bottom: 10px;
   margin-top: 10px;
+  /* border: dashed red 1px; */
+  align-items: center;
   text-align: center;
 }
 
 .label {
-  align-items: center;
   display: inline-block;
   min-width: 75px;
+  align-items: center;
 }
 
 #textarea {
+  font-size: 12px;
+  width: 80%; /* Full width */
+  padding: 8px;
   border: 1px solid #ccc; /* Gray border */
   border-radius: 12px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  font-size: 12px;
-  margin-bottom: 3px; /* Bottom margin */
   margin-top: 3px; /* Add a top margin */
-  padding: 8px;
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-  width: 80% /* Full width */
+  margin-bottom: 3px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 #register-form {
@@ -283,39 +284,39 @@ button[type=submit] {
 }
 
 .message {
-     -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 ::placeholder {
-  color: red;
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  color: red;
   opacity: 0.4;
+  font-size: 14px;
 }
 
 .error-message {
-  color: red;
   font-family: 'Lato', sans-serif;
-  font-size: 0.8em;
   font-weight: bold;
+  color: red;
+  font-size: 0.8em;
   opacity: 0.6;
 }
 
 #map {
-  border-bottom: solid black 1px;
+  border-top: solid black 1px;
   border-left: solid black 1px;
   border-right: solid black 1px;
-  border-top: solid black 1px;
+  border-bottom: solid black 1px;
 }
 
 /* Styling CSS grid */
 
 .grid {
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
 .grid__item {
@@ -337,8 +338,8 @@ button[type=submit] {
   clear: both;
   display: var(--dispflex);
   flex-direction: column;
-  justify-content: center;
   text-align: var(--text-center);
+  justify-content: center;
 }
 
 .berlin-illustration {
@@ -407,8 +408,8 @@ button[type=submit] {
   }
 
   .page-header__item:last-child {
-    align-self: center;
     flex-grow: 1;
+    align-self: center;
   }
 
   .navigation-list {
@@ -440,8 +441,8 @@ button[type=submit] {
   }
 
   .page-header__item:last-child {
-    align-self: center;
     flex-grow: 1;
+    align-self: center;
   }
 
   .navigation-list {
